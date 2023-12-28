@@ -50,3 +50,33 @@ let notempty = "Ashu"
 let NotEmptyLoggedIn = String(notempty)
 console.log(typeof NotEmptyLoggedIn);
 console.log(NotEmptyLoggedIn);
+
+/************************************OPERATION**************************************************************/
+
+
+let val = 3
+let negVal = -val
+console.log(negVal);
+
+/*
+console.log(2+2);
+console.log(2-2);
+console.log(2/2);
+console.log(2%2);
+console.log(2*2);
+console.log(2**2);
+*/
+
+let str = "Hello!"
+let name = " Ashutosh"
+let finalstr = str+name
+console.log(finalstr);
+
+console.log("1"+2);
+console.log(1+"2");
+console.log(1+1+"2"); // if string is encountered after some operations but not initiallly then firstly operations will be solved 
+                     //and then string will be appended.
+console.log("1"+"1"+2); // if it encounters string in the starting of operations 
+                       // then whole thing will be considered as string and simply appended.
+
+
