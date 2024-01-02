@@ -59,4 +59,43 @@ const usersArray = [
     }
 ]
 const temp = usersArray[0].email
-console.log(temp);
+// console.log(temp);
+
+// console.log(tinderUser);
+
+// console.log(Object.keys(tinderUser));     //specifying object name is mandatory because it doesn't know which object
+
+// console.log(Object.values(regularUser));   // 
+
+// console.log(Object.entries(tinderUser));
+
+// console.log(tinderUser.hasOwnProperty('isLogged'));
+
+/*De-structuring of objects*/
+const course = {
+    coursename:"JS-Hindi",
+    price:"1099",
+    courseInstructor:"Ashutosh"
+}
+const op = course.courseInstructor   //traditional way which is also correct
+console.log(op);
+
+
+const {courseInstructor: teacher} = course       // de structuring of object course
+console.log(teacher);
+
+/*APIs*/
+
+// /*JSON Api*/        Java script Object Notation
+// {
+//     name:"Ashu",
+//     id:"007",
+//     price:"779"
+// }
+
+/*Api*/
+[
+    {},
+    {},
+    {}
+]
