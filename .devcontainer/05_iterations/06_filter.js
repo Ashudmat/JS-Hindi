@@ -77,7 +77,9 @@ const userBooks = allBooks.filter( (bk) => bk.genre === 'History' )
 // console.log(userBooks);
 
 
-//Q. Find all books which are published after 2000 ?
+//Q. Find all books which are published after 2000 and genre is History ?
 //A....
-const userBooks2 = allBooks.filter( (bk) => bk.publishYear >= 2000 )
+const userBooks2 = allBooks.filter( (bk) => {
+    return bk.publishYear >= 2000 && bk.genre === 'History'
+} )
 console.log(userBooks2);
