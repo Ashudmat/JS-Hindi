@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    //Q. How to create any element?
+    //A. See below
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"  //setting class
+    //div.id = "myId"       //setting id
+    
+    //fun with js using math function
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title" , "changed title")
+    div.style.backgroundColor = "green"
+    div.style.padding = '10px'
+    //Above manipulations will be saved in memory but will not be visible in web page.
+
+    //If you want to set inner text in our web-page
+    //You have two options:---
+
+    //first option:
+    div.innerText = "Chai Aur Code"
+    
+    //second option  // this option is also preferred by some developers
+    const addText = document.createTextNode("Chai Aur Code")
+    div.appendChild(addText)
+    
+    //to reflect the change into the web-page // to print 
+    document.body.appendChild(div)
+</script>
+</html>

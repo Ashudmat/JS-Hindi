@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code | DOM</title>
+</head>
+<body style="background-color: #212 ;color: #fff;">
+    <ul class="language">
+        <li> Javascript </li>
+    </ul>
+</body>
+<script>
+    //defining a function 
+    function addLanguage (langName){
+    const li = document.createElement('li')   
+    li.innerHTML = langName     //adding text received from arguments
+    document.querySelector('.language').
+    appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Typescript")
+
+
+    //Above function is a good approach but not the best one because
+    //appendChild() appends the data at the last via traversing the whole tree.
+    // So, what if there were 1lakh list items?
+
+
+    //optimised function
+    function optimumlangName(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))  // best approach
+        document.querySelector('.language').
+        appendChild(li)
+        //Here we used querySelector() and appendChild() because we don't have any reference
+    }
+
+    optimumlangName("React.js")
+    optimumlangName("Angular.js")
+
+
+    // editing/updating the values:
+    //Q.Update Python to Moye Moye
+    const secondLang = document.querySelector('li:nth-child(2)')    //see=lecting the list which we want to edit
+
+    const updatedLang = document.createElement('li')
+    updatedLang.appendChild(document.createTextNode('Moye Moye'))
+    //Here we are replacing the values because we have the reference of previous value
+    secondLang.replaceWith(updatedLang)
+
+
+    //Q.Replace Javascript to Typescript
+    //using outerHTML
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Typescript</li>'
+
+    //Q.Replace React to Flask
+    //using innerHTML
+    const forthLang = document.querySelector('li:nth-child(4)')
+    forthLang.innerHTML = 'Flask'
+
+  
+    // remove/delete
+    //Q.Delete Angular
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    //Relations:--Child/Parent/Sibling---
+    //Movement from Parent to child:--------------
+    //parent.children
+    //parent.firstElementChild
+    //parent.lastElementChild
+    const parent = document.querySelector('.parent')
+    console.log(parent);     //returns div element
+    console.log(parent.children);    //returns HTMLCollections
+    console.log(parent.children[1]);
+    console.log(parent.children[1].innerHTML);
+
+//for loop inside parent
+for (let i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML);
+    
+}
+//styling
+parent.children[1].style.color = 'orange';
+
+//just like children. there are some others childs also like:
+console.log(parent.firstElementChild);
+console.log(parent.lastElementChild);
+
+//Movement from Child to parent or sibling:--------------
+const dayOne = document.querySelector('.day') 
+console.log(dayOne);
+
+console.log(dayOne.parentElement);
+
+console.log(dayOne.nextElementSibling);
+
+//************INTERESTING **********
+console.log("NODES:",parent.childNodes); // returns a node list containing every single element
+</script>
+</html>
+
